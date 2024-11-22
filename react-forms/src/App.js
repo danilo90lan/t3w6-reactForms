@@ -3,7 +3,10 @@ import PostContainer from './components/PostContainer';
 
 function App() {
   return (
-    <PostContainer/>
+    <div className='App'>
+      <PostContainer />
+    </div>
+
   )
 }
 

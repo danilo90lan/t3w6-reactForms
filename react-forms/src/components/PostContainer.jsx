@@ -24,6 +24,16 @@ export default class PostContainer extends Component {
         )
     }
 
+    updateData = (newAuthor, newLocation, newContent) => {
+        this.setState(
+            {
+                author:newAuthor,
+                location:newLocation,
+                content:newContent
+            }
+        )
+    }
+
     render() {
         return (
             <>
@@ -34,8 +44,9 @@ export default class PostContainer extends Component {
                             author={this.state.author}
                             dateCreated={this.state.dateCreated}
                             location={this.state.location}
-                            contant={this.state.content}
+                            content={this.state.content}
                             lastUpdate={this.state.lastUpdate}
+                            dataUpdated={this.updateData}
 
                         //could pass the entire state variable in one go
                         // parentState={this.state}
@@ -44,7 +55,7 @@ export default class PostContainer extends Component {
                             author={this.state.author}
                             dateCreated={this.state.dateCreated}
                             location={this.state.location}
-                            contant={this.state.content}
+                            content={this.state.content}
                             lastUpdate={this.state.lastUpdate}
                         />
                 }
